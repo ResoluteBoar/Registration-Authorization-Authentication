@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: security
+app:
+  jwt:
+    secret-key: "secret"
+    expiration-time:
+      access-token: 2m
