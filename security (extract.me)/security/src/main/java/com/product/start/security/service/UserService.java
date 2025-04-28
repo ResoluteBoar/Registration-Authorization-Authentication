@@ -24,4 +24,10 @@ public class UserService {
         userStorage.addUser(user);
         return user;
     }
+
+    public User addLibrarian(UserDTO userDTO) {
+        User librarian = new User(userDTO.getUsername(), bCryptPasswordEncoder.encode(userDTO.getPassword()), List.of("Librarian"));
+        userStorage.addUser(librarian);
+        return librarian;
+    }
 }
